@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remote Shutdown</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container */
+        .remote {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Antenna */
+        .antenna-stick {
+            width: 10px;
+            height: 180px;
+            background: #aaa;
+        }
+
+        .antenna-ball {
+            width: 80px;
+            height: 80px;
+            background: red;
+            border-radius: 50%;
+        }
+
+        /* Device Box */
+        .device {
+            width: 320px;
+            height: 300px;
+            background: #777;
+            margin-top: -5px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Big Power Button */
+        .power-btn {
+            width: 200px;
+            height: 200px;
+            background: red;
+            border-radius: 50%;
+            border: none;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .power-btn:hover {
+            background: #cc0000;
+        }
+
+        /* Exit Button */
+        .exit-btn {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            width: 90px;
+            height: 30px;
+            background: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .exit-btn:hover {
+            background: #333;
+        }
+
+        #status {
+            position: absolute;
+            bottom: 5px;
+            color: white;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="remote">
+
+    <!-- Antenna -->
+    <div class="antenna-ball"></div>
+    <div class="antenna-stick"></div>
+
+    <!-- Device -->
+    <div class="device">
+
+        <!-- Power Button -->
+        <button class="power-btn" onclick="sendShutdown()">
+            POWER<br>OFF
+        </button>
+
+        <!-- Exit Button -->
+        <button class="exit-btn" onclick="exitApp()">EXIT</button>
+
+        <p id="status"></p>
+    </div>
+</div>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js";
+  import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCB925l1YAt6ARKDeGkhQtOZNd_c0SkfVo",
+    authDomain: "remotemessenger-f9059.firebaseapp.com",
+    databaseURL: "https://remotemessenger-f9059-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "remotemessenger-f9059",
+    storageBucket: "remotemessenger-f9059.firebasestorage.app",
+    messagingSenderId: "170155228101",
+    appId: "1:170155228101:web:8d90ddac319c282f0ea9ac"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+
+  window.sendShutdown = function () {
+    set(ref(db, "commands"), "shutdown")
+      .then(() => {
+        document.getElementById("status").innerText = "✅ Shutdown sent";
+        const intervalId = setInterval(() => {
+      document.getElementById("status").innerText = " "
+}, 3000);
+
+
+   
+      })
+      .catch((error) => {
+        document.getElementById("status").innerText = "❌ Error";
+      });
+  };
+
+  window.exitApp = function () {
+        alert("close by your self ! Bitch !")
+  };
+</script>
+
+</body>
+</html>
