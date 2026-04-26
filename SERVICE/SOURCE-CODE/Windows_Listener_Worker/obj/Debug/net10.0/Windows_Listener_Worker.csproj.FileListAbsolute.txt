@@ -1,0 +1,5 @@
+C:\Users\PAGCOR\source\repos\Windows_Listener_Worker\Windows_Listener_Worker\obj\Debug\net10.0\Windows_Listener_Worker.csproj.AssemblyReference.cache
+C:\Users\PAGCOR\source\repos\Windows_Listener_Worker\Windows_Listener_Worker\obj\Debug\net10.0\Windows_Listener_Worker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PAGCOR\source\repos\Windows_Listener_Worker\Windows_Listener_Worker\obj\Debug\net10.0\Windows_Listener_Worker.AssemblyInfoInputs.cache
+C:\Users\PAGCOR\source\repos\Windows_Listener_Worker\Windows_Listener_Worker\obj\Debug\net10.0\Windows_Listener_Worker.AssemblyInfo.cs
+C:\Users\PAGCOR\source\repos\Windows_Listener_Worker\Windows_Listener_Worker\obj\Debug\net10.0\Windows_Listener_Worker.csproj.CoreCompileInputs.cache

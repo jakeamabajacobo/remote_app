@@ -1,0 +1,13 @@
+1.OPEN CMD
+2. Create a folder in  Drive C:  name "ShutdownListener"
+3.copy all the files from SERVICE/win-x64/ and paste to C:\ShtudownListener
+3.To register the service in local computer:
+
+ TYPE IN CMD:
+
+sc create Shutdown Listener binPath= "C:\ShutdownListener\YourApp.exe"
+
+sc start ShutdownListener
+
+
+

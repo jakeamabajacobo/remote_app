@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "dgSpecHash": "Czr7QOW9dJM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\PAGCOR\\source\\repos\\windows_listener\\windows_listener\\windows_listener.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\PAGCOR\\.nuget\\packages\\firebasedatabase.net\\4.0.4\\firebasedatabase.net.4.0.4.nupkg.sha512",
+    "C:\\Users\\PAGCOR\\.nuget\\packages\\litedb\\4.1.4\\litedb.4.1.4.nupkg.sha512",
+    "C:\\Users\\PAGCOR\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\PAGCOR\\.nuget\\packages\\system.reactive\\4.0.0\\system.reactive.4.0.0.nupkg.sha512",
+    "C:\\Users\\PAGCOR\\.nuget\\packages\\system.runtime.interopservices.windowsruntime\\4.3.0\\system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1904",
+      "level": "Warning",
+      "message": "Package 'LiteDB' 4.1.4 has a known critical severity vulnerability, https://github.com/advisories/GHSA-3x49-g6rc-c284",
+      "projectPath": "C:\\Users\\PAGCOR\\source\\repos\\windows_listener\\windows_listener\\windows_listener.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\PAGCOR\\source\\repos\\windows_listener\\windows_listener\\windows_listener.csproj",
+      "libraryId": "LiteDB",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'Newtonsoft.Json' 11.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
+      "projectPath": "C:\\Users\\PAGCOR\\source\\repos\\windows_listener\\windows_listener\\windows_listener.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\PAGCOR\\source\\repos\\windows_listener\\windows_listener\\windows_listener.csproj",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
+}
